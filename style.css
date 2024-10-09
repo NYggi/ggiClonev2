@@ -106,7 +106,6 @@ header {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Flex container for the hero section */
 section {
     display: flex;
     flex-direction: column;
@@ -121,88 +120,30 @@ section {
     }
 }
 
-/* Large Hero Banner Styling (Left) */
-.hero-banner {
-    position: relative;
-    flex: 2;
-    height: 400px;  /* Matches height of two stacked sections */
-    border-radius: 10px;
-    overflow: hidden;
+/* Large Hero Banner on the left */
+.disable-mobile-highlight.aspect-[760/320] {
+    flex: 2; /* Takes two-thirds of the space */
 }
 
-.hero-banner img {
+.disable-mobile-highlight img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-/* Banner text overlay for main banner */
-.banner-text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.banner-text {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.banner-text h3 {
-    font-size: 2rem;
-    color: #a53878;
-    margin-bottom: 10px;
-}
-
-.banner-text p {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.shop-sale-button {
-    background-color: #f25f29;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* Badge for sale label */
-.badge {
-    background-color: #c2d5b8;
-    color: #333;
-    padding: 5px 10px;
-    font-size: 0.875rem;
-    border-radius: 3px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-/* Right Section (Two stacked banners) */
-.right-section {
+/* Right side: two stacked sections */
+.md\:w-1\/3 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 100%;
 }
 
-.small-banner {
-    position: relative;
-    flex: 1;
-    overflow: hidden;
-    border-radius: 10px;
+/* Aspect ratio for the right stacked sections */
+.disable-mobile-highlight.aspect-[380/160] {
+    flex: 1; /* Takes one-third of the space */
 }
 
-.small-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Overlay for small banners */
+/* Overlay styling for the text inside the right stacked sections */
 .overlay {
     position: absolute;
     top: 0;
