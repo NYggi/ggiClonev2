@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Banner styling */
+/* Banner styling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .banner {
     background-color: gold;
     color: blue;
@@ -16,7 +16,7 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
-/* Header styling */
+/* Header styling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 header {
     background-color: #f8f9fa;
     border-bottom: 1px solid #e0e0e0;
@@ -67,7 +67,7 @@ header {
 .widget a:hover {
     color: #007bff;
 }
-/* Secondary navigation menu styling */
+/* Secondary navigation menu styling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .secondary-nav {
     background-color: #f0f0f0;  /* Light grey background */
     padding: 15px 0;
@@ -101,12 +101,12 @@ header {
 .secondary-nav li a:hover {
     color: #007bff;
 }
-/* Hero section */
+/* Hero section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .disable-mobile-highlight {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Flex layout for the top deals section */
+/* Flex container for the hero section */
 section {
     display: flex;
     flex-direction: column;
@@ -118,47 +118,111 @@ section {
 @media (min-width: 768px) {
     section {
         flex-direction: row;
-        gap: 5%;
     }
 }
 
-/* Hero image styling */
-a[aria-label="Main hero image"] {
+/* Large Hero Banner Styling (Left) */
+.hero-banner {
+    position: relative;
     flex: 2;
+    height: 400px;  /* Matches height of two stacked sections */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hero-banner img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Banner text overlay for main banner */
+.banner-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.banner-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner-text h3 {
+    font-size: 2rem;
+    color: #a53878;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.shop-sale-button {
+    background-color: #f25f29;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Badge for sale label */
+.badge {
+    background-color: #c2d5b8;
+    color: #333;
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Right Section (Two stacked banners) */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+
+.small-banner {
+    position: relative;
+    flex: 1;
     overflow: hidden;
     border-radius: 10px;
 }
 
-a[aria-label="Main hero image"] img {
+.small-banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Side image carousel */
-div[aria-label="Hero carousel"] {
-    flex: 1;
+/* Overlay for small banners */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 102, 51, 0.7); /* Greenish background */
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    color: #c2d5b8;
+    padding: 20px;
 }
 
-a[aria-label="Hero image #1"],
-a[aria-label="Hero image #2"] {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+.overlay p {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
-a[aria-label="Hero image #1"] img,
-a[aria-label="Hero image #2"] img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.arrow {
+    font-size: 2rem;
+    color: #c2d5b8;
 }
-
-/* Flexbox container to align images */
-.flex {
-    display: flex;
-    flex-direction: column;
-    gap: 5%;
