@@ -4,7 +4,18 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/* Banner styling */
+.banner {
+    background-color: gold;
+    color: blue;
+    text-align: center; /* Horizontal centering */
+    display: flex;
+    justify-content: center; /* Horizontal centering within flexbox */
+    align-items: center;     /* Vertical centering */
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
 /* Header styling */
 header {
     background-color: #f8f9fa;
