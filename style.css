@@ -101,3 +101,45 @@ header {
 .secondary-nav li a:hover {
     color: #007bff;
 }
+/* Geo-location-based Grow Zone Section */
+.geo-location {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 100%;
+    max-width: 800px;
+}
+
+.location-btn p {
+    margin: 0;
+}
+
+.grow-zone-info {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+}
+
+.zone-info {
+    margin-right: 10px;
+}
