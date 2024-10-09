@@ -103,43 +103,41 @@ header {
 }
 /* Geo-location-based Grow Zone Section */
 .geo-location {
-    background-color: #f8f9fa;
+    background-color: #f0f0f0;
     border-bottom: 1px solid #ddd;
-    padding: 15px;
+    padding: 15px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;  /* Left and right layout */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left side of the grow zone section */
+.location-left {
+    display: flex;
     align-items: center;
 }
 
-.location-btn {
+.location-left p {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Right side of the grow zone section */
+.location-right {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    width: 100%;
-    max-width: 800px;
 }
 
-.location-btn p {
-    margin: 0;
-}
-
-.grow-zone-info {
-    flex-grow: 1;
-    text-align: right;
+.zone-info {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .icon {
     height: 24px;
     width: 24px;
-    margin-right: 10px;
-}
-
-.zone-info {
-    margin-right: 10px;
 }
