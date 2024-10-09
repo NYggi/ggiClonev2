@@ -168,3 +168,73 @@ section {
     font-size: 2rem;
     color: #c2d5b8;
 }
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Horizontal scrolling carousel */
+.flex.snap-x {
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+}
+
+.snap-start {
+    scroll-snap-align: start;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hidden {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Product card styling */
+.w-40.sm\:w-48 {
+    width: 10rem;
+}
+
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+.bg-quinary {
+    background-color: #f8f8f8;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-accent-review-filled {
+    color: #ffcc00; /* Example color for filled stars */
+}
+
+.text-tertiary {
+    color: #9ca3af; /* Example tertiary color */
+}
+
+.text-accent-primary {
+    color: #ff4500; /* Example color for the discount */
+}
+
+/* Hover effects */
+.group-hover\:text-accent-secondary:hover {
+    color: #007BFF; /* Example hover color */
+}
+
+.group-hover\:mini-wishlist-button:hover {
+    background-color: #FFCDD2; /* Example hover color for save button */
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
