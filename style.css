@@ -101,3 +101,64 @@ header {
 .secondary-nav li a:hover {
     color: #007bff;
 }
+/* Hero section */
+.disable-mobile-highlight {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Flex layout for the top deals section */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    section {
+        flex-direction: row;
+        gap: 5%;
+    }
+}
+
+/* Hero image styling */
+a[aria-label="Main hero image"] {
+    flex: 2;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+a[aria-label="Main hero image"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Side image carousel */
+div[aria-label="Hero carousel"] {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+a[aria-label="Hero image #1"],
+a[aria-label="Hero image #2"] {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+a[aria-label="Hero image #1"] img,
+a[aria-label="Hero image #2"] img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Flexbox container to align images */
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
