@@ -65,29 +65,25 @@
     <div class="px-0 md:px-6 lg:px-10">
         <h1 class="sr-only">Homepage</h1>
         <!-- Container for the main banner and the two stacked sections -->
-        <section class="flex w-full flex-col gap-4 md:max-h-[400px] md:flex-row md:gap-5 md:rounded-lg">
+        <section class="flex w-full flex-col gap-4 md:flex-row md:gap-5 md:rounded-lg">
             <h2 class="sr-only">Top Deals</h2>
             
-            <!-- Large banner section on the left -->
-            <a aria-label="Main hero image" class="hero-banner overflow-hidden bg-quaternary md:w-2/3 md:rounded-lg" href="/collections/sale">
+            <!-- Large banner section on the left with aspect ratio adjustment -->
+            <a aria-label="Main hero image" class="disable-mobile-highlight aspect-[760/320] overflow-hidden bg-quaternary md:aspect-auto md:w-2/3 md:rounded-lg" href="/collections/sale">
                 <picture>
-                    <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-desktop-1-10-8-24.gif?v=1727812061" alt="Surprise Sale" class="h-full w-full object-cover" loading="eager">
+                    <source media="(max-width: 767px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-1-10-8-24.gif?v=1727812061">
+                    <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-desktop-1-10-8-24.gif?v=1727812061">
+                    <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-desktop-1-10-8-24.gif?v=1727812061" alt="Top Deals Image" class="h-full w-full object-cover" loading="eager">
                 </picture>
-                <div class="banner-text-container">
-                    <div class="banner-text">
-                        <span class="badge">THIS WEEK ONLY</span>
-                        <h3>Surprise SALE</h3>
-                        <p>Click to see our biggest savings!</p>
-                        <a class="shop-sale-button" href="#">Shop the Sale</a>
-                    </div>
-                </div>
             </a>
             
-            <!-- Right side: Two stacked sections -->
-            <div class="right-section flex flex-col gap-4 md:w-1/3">
+            <!-- Right side: Two stacked sections with correct aspect ratio -->
+            <div class="flex flex-col gap-4 md:w-1/3">
                 <!-- First section -->
-                <a aria-label="Bestsellers" class="small-banner bg-secondary" href="/collections/bestsellers">
+                <a aria-label="Bestsellers" class="disable-mobile-highlight aspect-[380/160] bg-secondary overflow-hidden rounded-lg" href="/collections/bestsellers">
                     <picture>
+                        <source media="(max-width: 767px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-2-10-8-24.webp?v=1727812061">
+                        <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-2-10-8-24.webp?v=1727812061">
                         <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-2-10-8-24.webp?v=1727812061" alt="Bestsellers from $19.95" class="h-full w-full object-cover" loading="eager">
                     </picture>
                     <div class="overlay">
@@ -95,9 +91,12 @@
                         <span class="arrow">→</span>
                     </div>
                 </a>
+
                 <!-- Second section -->
-                <a aria-label="Deer-resistant" class="small-banner bg-secondary" href="/collections/deer-resistant">
+                <a aria-label="Deer-resistant" class="disable-mobile-highlight aspect-[380/160] bg-secondary overflow-hidden rounded-lg" href="/collections/deer-resistant">
                     <picture>
+                        <source media="(max-width: 767px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-3-10-8-24.webp?v=1727812061">
+                        <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-3-10-8-24.webp?v=1727812061">
                         <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-3-10-8-24.webp?v=1727812061" alt="Deer-resistant expert picks" class="h-full w-full object-cover" loading="eager">
                     </picture>
                     <div class="overlay">
