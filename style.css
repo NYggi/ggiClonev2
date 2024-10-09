@@ -67,3 +67,29 @@ header {
 .widget a:hover {
     color: #007bff;
 }
+/* Secondary navigation menu styling */
+.secondary-nav {
+    background-color: #f0f0f0;  /* Light grey background */
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.secondary-nav ul {
+    display: flex;
+    justify-content: center;   /* Center the menu items */
+    gap: 30px;                 /* Spacing between the items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.secondary-nav li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.secondary-nav li a:hover {
+    color: #007bff;
+}
