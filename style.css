@@ -109,7 +109,7 @@ header {
     display: flex;
     justify-content: space-between;  /* Left and right layout */
     align-items: center;
-    max-width: 1200px;
+    max-width: auto;
     margin: 0 auto;
 }
 
