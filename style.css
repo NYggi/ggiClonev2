@@ -76,15 +76,17 @@ header {
 
 .secondary-nav ul {
     display: flex;
-    justify-content: space-around;   /* Evenly distribute the items across the width */
-    align-items: center;             /* Center items vertically */
-    list-style: none;
-    margin: 0;
+    justify-content: space-between; /* Distribute items across the full width */
+    align-items: center;            /* Center items vertically */
+    list-style: none;               /* Remove bullets */
     padding: 0;
+    margin: 0;
 }
 
 .secondary-nav li {
-    list-style: none;
+    /* Ensures each list item spans the space evenly */
+    flex-grow: 1;
+    text-align: center;  /* Center text within each item */
 }
 
 .secondary-nav li a {
@@ -93,6 +95,7 @@ header {
     color: #333;
     font-weight: bold;
     padding: 10px;
+    display: block; /* Makes the entire link area clickable */
 }
 
 .secondary-nav li a:hover {
