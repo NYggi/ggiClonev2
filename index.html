@@ -59,7 +59,45 @@
             <li><a href="#">Landscape Services</a></li>
         </ul>
     </nav>
-   
+
+    <!-- Main Section: Top Deals -->
+    <main class="grow bg-primary">
+        <div class="px-0 md:px-6 lg:px-10">
+            <h1 class="sr-only">Homepage</h1>
+            <section class="disable-mobile-highlight flex w-full flex-col gap-4 md:aspect-[1360/400] md:max-h-[400px] md:flex-row md:items-stretch md:justify-stretch md:gap-5 md:rounded-lg">
+                <h2 class="sr-only">Top Deals</h2>
+                
+                <!-- Main Hero Image -->
+                <a aria-label="Main hero image" class="disable-mobile-highlight aspect-[390/236] overflow-hidden bg-quaternary md:aspect-auto md:w-2/3 md:rounded-lg" href="/collections/sale">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-1-10-8-24.gif?v=1727812061">
+                        <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-desktop-1-10-8-24.gif?v=1727812061">
+                        <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-desktop-1-10-8-24.gif?v=1727812061" alt="Top Deals Image" class="h-full w-full object-cover object-left" loading="eager">
+                    </picture>
+                </a>
+                
+                <!-- Side Images Carousel -->
+                <div class="flex aspect-[114/40] w-full snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-hidden px-4 scrollbar-hidden md:h-full md:max-h-full md:w-1/3 md:flex-col md:justify-stretch md:gap-5 md:px-0">
+                    <!-- First Side Image -->
+                    <a aria-label="Hero image #1" class="disable-mobile-highlight block h-full w-[calc(90%-2rem)] shrink-0 snap-center overflow-hidden rounded-lg bg-quaternary sm:w-[calc(80%-2rem)] md:h-[calc(50%-0.625rem)] md:w-full" href="/collections/bestsellers">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-2-10-8-24.webp?v=1727812061">
+                            <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-2-10-8-24.webp?v=1727812061">
+                            <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-2-10-8-24.webp?v=1727812061" alt="Hero Image 2" class="h-full w-full object-cover object-left" loading="eager">
+                        </picture>
+                    </a>
+                    <!-- Second Side Image -->
+                    <a aria-label="Hero image #2" class="disable-mobile-highlight block h-full w-[calc(90%-2rem)] shrink-0 snap-center overflow-hidden rounded-lg bg-quaternary sm:w-[calc(80%-2rem)] md:h-[calc(50%-0.625rem)] md:w-full" href="/collections/deer-resistant">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-3-10-8-24.webp?v=1727812061">
+                            <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-3-10-8-24.webp?v=1727812061">
+                            <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/hp-hero-mobile-3-10-8-24.webp?v=1727812061" alt="Hero Image 3" class="h-full w-full object-cover object-left" loading="eager">
+                        </picture>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
     <!-- More sections can be added below -->
 
     <script src="script.js"></script>
