@@ -102,137 +102,41 @@
         </section>
     </div>
 </main>
-<!-- Second section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- Top deals silder ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!-- Second Section: Top Selling Products -->
     <div class="px-0 md:px-6 lg:px-10">
-    <section class="py-3 md:py-6">
-        <span class="flex flex-col gap-4">
-            <h2 class="px-4 text-2xl font-bold md:px-0">Our Best Sellers</h2>
+        <section class="py-3 md:py-6">
+            <span class="flex flex-col gap-4">
+                <h2 class="px-4 text-2xl font-bold md:px-0">Top Selling Products</h2>
 
-            <!-- Carousel container -->
-            <div class="relative block h-full w-full">
-                <div class="flex snap-x snap-mandatory flex-row justify-start gap-0 overflow-x-auto pr-4 align-top scrollbar-hidden md:gap-4 md:pr-0">
-                    
-                    <!-- Product Card 1 -->
-                    <div class="flex snap-start pl-4 md:pl-0">
-                        <div class="relative">
-                            <a class="disable-mobile-highlight relative flex w-40 shrink-0 flex-col justify-start gap-1.5 sm:w-48" href="/products/thuja-green-giant">
-                                <picture>
-                                    <source srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/Thuja_Green_Giant_Tree_07_FGT_ded2b467-1f66-4b4a-a28d-902a6150a036.jpg?v=1698958524" type="image/avif">
-                                    <source srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/Thuja_Green_Giant_Tree_07_FGT_ded2b467-1f66-4b4a-a28d-902a6150a036.jpg?v=1698958524" type="image/webp">
-                                    <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/Thuja_Green_Giant_Tree_07_FGT_ded2b467-1f66-4b4a-a28d-902a6150a036.jpg?v=1698958524" alt="Thuja Green Giant Arborvitae" class="aspect-square w-full rounded-lg bg-quinary object-contain" loading="lazy">
-                                </picture>
-                                <div class="font-bold leading-5 sm:group-hover:text-accent-secondary">Thuja Green Giant Arborvitae</div>
-                                <div class="flex items-center gap-1">
-                                    <div class="flex">
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                    </div>
-                                    <span class="text-sm text-tertiary">2,675</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <span class="text-lg font-bold">$14.95</span>
-                                    <span class="text-tertiary line-through">$24.95</span>
-                                </div>
-                                <div class="font-bold text-accent-primary">40% OFF</div>
-                            </a>
-                            <span class="absolute right-0 top-0">
-                                <button title="Save for later" class="group/mini-wishlist-button p-2">
-                                    <div class="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white outline outline-1 outline-black/5 group-hover/mini-wishlist-button:bg-secondary">
-                                        <svg class="h-4 w-4"><use href="/spritesheet.svg#heart-outline"></use></svg>
-                                    </div>
-                                </button>
-                            </span>
+                <!-- Container for product cards -->
+                <div class="product-list" id="product-list"></div>
+
+            </span>
+        </section>
+    </div>
+<!-- JavaScript to Fetch Top-Selling Products -->
+    <script>
+        // Fetch top-selling products from the backend and display them
+        fetch('/api/top-selling')
+            .then(response => response.json())
+            .then(products => {
+                const productList = document.getElementById('product-list');
+
+                products.forEach(product => {
+                    const productItem = `
+                        <div class="product">
+                            <img src="${product.image}" alt="${product.name}">
+                            <h3>${product.name}</h3>
+                            <p>Price: $${product.price}</p>
+                            <p>Discount: ${product.discount}% OFF</p>
+                            <p>Sales: ${product.sales}</p>
                         </div>
-                    </div>
-
-                    <!-- Product Card 2 -->
-                    <div class="flex snap-start pl-4 md:pl-0">
-                        <div class="relative">
-                            <a class="disable-mobile-highlight relative flex w-40 shrink-0 flex-col justify-start gap-1.5 sm:w-48" href="/products/honeycrisp-apple-tree">
-                                <picture>
-                                    <source srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/Honeycrisp_Apple_4_FGT_0b010b3b-df69-4775-b7d6-5460bbd055aa.jpg?v=1698960745" type="image/avif">
-                                    <source srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/Honeycrisp_Apple_4_FGT_0b010b3b-df69-4775-b7d6-5460bbd055aa.jpg?v=1698960745" type="image/webp">
-                                    <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/files/Honeycrisp_Apple_4_FGT_0b010b3b-df69-4775-b7d6-5460bbd055aa.jpg?v=1698960745" alt="Honeycrisp™ Apple Tree" class="aspect-square w-full rounded-lg bg-quinary object-contain" loading="lazy">
-                                </picture>
-                                <div class="font-bold leading-5 sm:group-hover:text-accent-secondary">Honeycrisp™ Apple Tree</div>
-                                <div class="flex items-center gap-1">
-                                    <div class="flex">
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                    </div>
-                                    <span class="text-sm text-tertiary">343</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <span class="text-lg font-bold">$144.95</span>
-                                    <span class="text-tertiary line-through">$189.95</span>
-                                </div>
-                                <div class="font-bold text-accent-primary">24% OFF</div>
-                            </a>
-                            <span class="absolute right-0 top-0">
-                                <button title="Save for later" class="group/mini-wishlist-button p-2">
-                                    <div class="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white outline outline-1 outline-black/5 group-hover/mini-wishlist-button:bg-secondary">
-                                        <svg class="h-4 w-4"><use href="/spritesheet.svg#heart-outline"></use></svg>
-                                    </div>
-                                </button>
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 3 -->
-                    <div class="flex snap-start pl-4 md:pl-0">
-                        <div class="relative">
-                            <a class="disable-mobile-highlight relative flex w-40 shrink-0 flex-col justify-start gap-1.5 sm:w-48" href="/products/autumnblaze">
-                                <picture>
-                                    <source srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Autumn_Blaze_Maple_1_FGT.jpg?v=1599029855" type="image/avif">
-                                    <source srcset="https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Autumn_Blaze_Maple_1_FGT.jpg?v=1599029855" type="image/webp">
-                                    <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Autumn_Blaze_Maple_1_FGT.jpg?v=1599029855" alt="Autumn Blaze® Red Maple Tree" class="aspect-square w-full rounded-lg bg-quinary object-contain" loading="lazy">
-                                </picture>
-                                <div class="font-bold leading-5 sm:group-hover:text-accent-secondary">Autumn Blaze® Red Maple Tree</div>
-                                <div class="flex items-center gap-1">
-                                    <div class="flex">
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                        <svg class="h-4 w-4 text-accent-review-filled"><use href="/spritesheet.svg#star"></use></svg>
-                                    </div>
-                                    <span class="text-sm text-tertiary">749</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <span class="text-lg font-bold">$164.95</span>
-                                    <span class="text-tertiary line-through">$229.95</span>
-                                </div>
-                                <div class="font-bold text-accent-primary">28% OFF</div>
-                            </a>
-                            <span class="absolute right-0 top-0">
-                                <button title="Save for later" class="group/mini-wishlist-button p-2">
-                                    <div class="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white outline outline-1 outline-black/5 group-hover/mini-wishlist-button:bg-secondary">
-                                        <svg class="h-4 w-4"><use href="/spritesheet.svg#heart-outline"></use></svg>
-                                    </div>
-                                </button>
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Add more product cards here with the same structure for other products  !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-                </div>
-                <button class="focus:ring-system-focus disable-mobile-highlight items-center justify-center font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed text-button-secondary disabled:text-button-secondary-disabled bg-button-secondary active:bg-button-secondary-active hover:bg-button-secondary-hover text-base absolute -right-5 top-24 z-10 -mt-5 hidden h-10 w-10 rounded-full p-0 drop-shadow md:flex" type="button" aria-label="next carousel page">
-                    <svg class="h-5 w-5"><use href="/spritesheet.svg#chevron-right"></use></svg>
-                </button>
-            </div>
-
-        </span>
-    </section>
-</div>
-
-
+                    `;
+                    productList.innerHTML += productItem;
+                });
+            });
+    </script>
     
     <!-- More sections can be added below -------------------------------------------------------------------------------------------------------------------------------------->
 
